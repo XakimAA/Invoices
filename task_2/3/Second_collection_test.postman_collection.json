@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "fa655d43-2290-40ac-8b25-5d883d502815",
+		"name": "Second_collection_test",
+		"description": "Тест на получение накладных, отфильтрованных по значению поля.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "фильтрация по id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://waybill-server.herokuapp.com/invoices?{{id_name}}={{id_value}}",
+					"protocol": "https",
+					"host": [
+						"waybill-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{id_name}}",
+							"value": "{{id_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "фильтрация по direction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://waybill-server.herokuapp.com/invoices?{{direction_name}}={{direction_value}}",
+					"protocol": "https",
+					"host": [
+						"waybill-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{direction_name}}",
+							"value": "{{direction_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "фильтрация по number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://waybill-server.herokuapp.com/invoices?{{number_name}}={{number_value}}",
+					"protocol": "https",
+					"host": [
+						"waybill-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{number_name}}",
+							"value": "{{number_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "фильтрация по date_created",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://waybill-server.herokuapp.com/invoices?{{date_created_name}}={{date_created_value}}",
+					"protocol": "https",
+					"host": [
+						"waybill-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{date_created_name}}",
+							"value": "{{date_created_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "фильтрация по date_due",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://waybill-server.herokuapp.com/invoices?{{date_due_name}}={{date_due_value}}",
+					"protocol": "https",
+					"host": [
+						"waybill-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{date_due_name}}",
+							"value": "{{date_due_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "фильтрация по data_supply",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://waybill-server.herokuapp.com/invoices?{{date_supply_name}}={{date_supply_value}}",
+					"protocol": "https",
+					"host": [
+						"waybill-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{date_supply_name}}",
+							"value": "{{date_supply_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "фильтрация по comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "97e14cf0-8b97-4788-b720-d3c2d9120a7a",
+						"exec": [
+							"[\r",
+							"  {\r",
+							"    \"id\": \"5ac1f09ac46e68ee97c8f424\",\r",
+							"    \"direction\": \"e795889d-c1a0-4d42-b67b-d1e72200a213\",\r",
+							"    \"number\": 771062,\r",
+							"    \"date_created\": 344908800000,\r",
+							"    \"date_due\": \"27 May 1988\",\r",
+							"    \"date_supply\": 1248998400000,\r",
+							"    \"comment\": \"Esse nisi dolore nisi velit ea cillum deserunt. Sunt aliquip esse elit irure eiusmod sunt commodo sint cupidatat aliqua velit elit amet ut. Dolor esse ad ad non adipisicing culpa id voluptate do.\"\r",
+							"  }\r",
+							"]"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://waybill-server.herokuapp.com/invoices?{{comment_name}}={{comment_value}}",
+					"protocol": "https",
+					"host": [
+						"waybill-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{comment_name}}",
+							"value": "{{comment_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "540a810e-217e-466e-8b50-557a905c742f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "89da188a-a2e3-48c2-95a0-35ee79a41e81",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ccffcbdd-763c-4aca-a9fe-0d04507edc2c",
+			"key": "id_value",
+			"value": "5ac1f09a60edb54701c767da",
+			"type": "string"
+		},
+		{
+			"id": "8e6dc0f1-1a64-4951-8cc0-f825ff5ffa51",
+			"key": "direction_value",
+			"value": "bee33a4c-e0cf-4f2c-80b5-93ccab966e46",
+			"type": "string"
+		},
+		{
+			"id": "419b79bb-ca37-44b5-a02d-7c5d23ec9c24",
+			"key": "number_value",
+			"value": "39804",
+			"type": "string"
+		},
+		{
+			"id": "3e967fc2-6654-4fbf-a62f-ae6b42e96e16",
+			"key": "date_created_value",
+			"value": "669772800000",
+			"type": "string"
+		},
+		{
+			"id": "7c4bbe4a-92ee-42ee-aff7-7858dccd63d0",
+			"key": "date_due_value",
+			"value": "08 August 1985",
+			"type": "string"
+		},
+		{
+			"id": "3f83af18-cb07-42f6-b6c6-fecfa92e1499",
+			"key": "date_supply_value",
+			"value": "340329600000",
+			"type": "string"
+		},
+		{
+			"id": "b972b279-d161-4125-9f5c-63a7fedc94ba",
+			"key": "comment_value",
+			"value": "Esse nisi dolore nisi velit ea cillum deserunt. Sunt aliquip esse elit irure eiusmod sunt commodo sint cupidatat aliqua velit elit amet ut. Dolor esse ad ad non adipisicing culpa id voluptate do.",
+			"type": "string"
+		},
+		{
+			"id": "aa9f5ba9-c2a0-4fe2-973e-7af7b9f1bfed",
+			"key": "id_name",
+			"value": "id",
+			"type": "string"
+		},
+		{
+			"id": "e2aff2e4-6164-41d6-8de6-9c32f0c27178",
+			"key": "direction_name",
+			"value": "direction",
+			"type": "string"
+		},
+		{
+			"id": "9de7161d-93ce-4697-a931-f9759d760984",
+			"key": "number_name",
+			"value": "number",
+			"type": "string"
+		},
+		{
+			"id": "e211bce1-9328-4b19-ab15-097bcf4213e3",
+			"key": "date_created_name",
+			"value": "date_created",
+			"type": "string"
+		},
+		{
+			"id": "8933090a-4cdc-4c82-8684-d4808d5ce0ff",
+			"key": "date_supply_name",
+			"value": "date_supply",
+			"type": "string"
+		},
+		{
+			"id": "89ecfc24-9e0e-4e0f-9879-82161c4f21ce",
+			"key": "comment_name",
+			"value": "comment",
+			"type": "string"
+		},
+		{
+			"id": "c4d287f2-a1da-439a-b50d-b5ae9b73b595",
+			"key": "date_due_name",
+			"value": "date_due",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
