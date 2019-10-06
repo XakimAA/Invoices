@@ -45,6 +45,7 @@ function add(){
         url: url,        
         data: JSON.stringify({
             "number" : +$("#number").val(),
+            "direction" : uuidv1(),
             "date_created" : (new Date($("#date_created").val())).getTime(),
             "date_supply" : (new Date($("#date_supply").val())).getTime(),
             "comment" : $("#comment").val(),
@@ -71,6 +72,7 @@ function update(){
             "date_created" : (new Date($("#date_created").val())).getTime(),
             "date_supply" : (new Date($("#date_supply").val())).getTime(),
             "comment" : $("#comment").val(),
+            "direction": $("#direction").val()
         }),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
@@ -107,6 +109,7 @@ function getData(id){
                 defaultDate: response.date_supply
             });
             $("#comment").val(response.comment);
+            $("#direction").val(response.direction)
         },
         error:  function(response){
            console.log(response);

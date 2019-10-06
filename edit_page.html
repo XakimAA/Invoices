@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Накладная</title>
+  <title>Invoices</title>
   <script src="js/jquery.min.js"></script>
   <script src="js/edit_page.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="http://wzrd.in/standalone/uuid%2Fv1@latest"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -18,6 +19,7 @@
 <body>
     <div class="container">
         <h2>Invoices</h2>
+        <input id="direction" hidden>
         <label>Number<span class="require">*</span>:</label>
         <input class="form-control" id="number"> 
         <label>Invoice date<span class="require">*</span>:</label>
@@ -25,7 +27,7 @@
         <label>Supply date<span class="require">*</span>:</label>
         <input class="form-control" id="date_supply"> 
         <label>Comment:</label>
-        <textarea class="form-control" id="comment"> </textarea>
+        <textarea class="form-control" id="comment"></textarea>
         <label class="require">*required field</label>
         <button id="btnAction" class="btn btn-primary float-right">Save</button>
     </div>
