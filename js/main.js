@@ -62,9 +62,10 @@ function getFilters(){
         default:
             break;
     }
-    
-    filter._sort = $("#orderItem option:selected").attr("name");
-    filter._order = $("#orderDirection option:selected").attr("name");
+    if ($("#orderDirection option:selected").attr("name") !== "nothing") {
+        filter._sort = $("#orderItem option:selected").attr("name");
+        filter._order = $("#orderDirection option:selected").attr("name");
+    }
     return filter;
 }
 
