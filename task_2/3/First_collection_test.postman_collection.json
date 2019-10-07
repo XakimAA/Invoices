@@ -8,6 +8,26 @@
 	"item": [
 		{
 			"name": "https://waybill-server.herokuapp.com/invoices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "76f1b8eb-1c42-404e-9fc9-8eb112f08e6b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Invoises count is correct\", function(){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).to.eql(10);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -29,6 +49,24 @@
 		},
 		{
 			"name": "https://waybill-server.herokuapp.com/invoices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5de6ba16-a6d2-4305-9c55-458078d4e761",
+						"exec": [
+							"pm.test(\"Status code is 201\", function(){",
+							"    pm.response.to.have.status(201);",
+							"    var jsonData = pm.response.json();",
+							"    pm.globals.set(\"var_id\", jsonData.id);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -41,12 +79,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"direction\":\"d8cfaaa0-e865-11e9-b0ac-894b64a06656\",\n\t\"number\": 55958,\n\t\"date_created\": 102280800000,\n\t\"date_due\": \"15 August 2009\",\n\t\"date_supply\": 1085701400000,\n\t\"comment\": \"new comment\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n\t\"direction\":\"d8cfaaa0-e865-11e9-b0ac-894b64a06656\",\n\t\"number\": 55958,\n\t\"date_created\": 102280800000,\n\t\"date_due\": \"15 August 2009\",\n\t\"date_supply\": 1085701400000,\n\t\"comment\": \"new comment\"\n}"
 				},
 				"url": {
 					"raw": "https://waybill-server.herokuapp.com/invoices",
@@ -66,6 +99,20 @@
 		},
 		{
 			"name": "https://waybill-server.herokuapp.com/invoices/5ac1f09a1248c018d5f62d87",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1771ad66-a924-4d96-bded-fc0d0dbb35ad",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -78,15 +125,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"direction\":\"d8cfaaa0-e865-11e9-b0ac-894b64a06656\",\n\t\"number\": 55958,\n\t\"date_created\": 102280800000,\n\t\"date_due\": \"15 August 2009\",\n\t\"date_supply\": 1085701400000,\n\t\"comment\": \"new comment again\"\n}",
-					"options": {
-						"raw": {
-							"language": "javascript"
-						}
-					}
+					"raw": "{\n\t\"direction\":\"d8cfaaa0-e865-11e9-b0ac-894b64a06656\",\n\t\"number\": 55958,\n\t\"date_created\": 102280800000,\n\t\"date_due\": \"15 August 2009\",\n\t\"date_supply\": 1085701400000,\n\t\"comment\": \"new comment again\"\n}"
 				},
 				"url": {
-					"raw": "https://waybill-server.herokuapp.com/invoices/5ac1f09a1248c018d5f62d87",
+					"raw": "https://waybill-server.herokuapp.com/invoices/{{var_id}}",
 					"protocol": "https",
 					"host": [
 						"waybill-server",
@@ -95,7 +137,7 @@
 					],
 					"path": [
 						"invoices",
-						"5ac1f09a1248c018d5f62d87"
+						"{{var_id}}"
 					]
 				},
 				"description": "Тест на изменение накладных"
@@ -104,11 +146,25 @@
 		},
 		{
 			"name": "https://waybill-server.herokuapp.com/invoices/5ac1f09a1248c018d5f62d87",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d2090132-fed7-4d9d-8073-2c28b872a53b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://waybill-server.herokuapp.com/invoices/5ac1f09a1248c018d5f62d87",
+					"raw": "https://waybill-server.herokuapp.com/invoices/{{var_id}}",
 					"protocol": "https",
 					"host": [
 						"waybill-server",
@@ -117,7 +173,7 @@
 					],
 					"path": [
 						"invoices",
-						"5ac1f09a1248c018d5f62d87"
+						"{{var_id}}"
 					]
 				}
 			},
