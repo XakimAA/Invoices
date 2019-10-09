@@ -2,7 +2,7 @@
 name: Задача на доработку
 about: Если что-то пошло не так
 title: ''
-labels: feature
+labels: 'bug'
 assignees: ''
 
 ---
