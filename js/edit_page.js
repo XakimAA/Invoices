@@ -5,12 +5,15 @@ $(document).ready(function(){
     var urlParams = new URLSearchParams(window.location.search)
     if (urlParams.has('id')) {
         id = urlParams.get('id');
+        $("#header").text("Invoice editing");
         getData(id);
 
         $("#btnAction").click(function(){
             update();
         });
     } else {
+        $("#header").text("Invoice creating");
+
         $("#date_created").flatpickr({
             enableTime: false,
             dateFormat: "d.m.Y",
