@@ -10,3 +10,15 @@ h2{
 td button{
     margin-bottom: 0.5em;
 }
+
+.btn-cyan {
+    background-color: #00dddd;
+    border-color: #00dddd;
+    color: white;
+}
+
+.btn-rose {
+    background-color: #EA899A;
+    border-color: #EA899A;
+    color: white;
+}
