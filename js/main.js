@@ -85,8 +85,8 @@ function getItem(filter){
                     <td>'+ new Date(element.date_supply).toLocaleDateString() +'</td>\
                     <td>'+ element.comment +'</td>\
                     <td>\
-                        <button attr-id="'+ element.id +'" attr-type="edit" class="btn btn-primary">Edit</button>\
-                        <button attr-id="'+ element.id +'" attr-type="delete" class="btn btn-danger">Delete</button>\
+                        <button attr-id="'+ element.id +'" attr-type="edit" class="btn btn-cyan">Edit</button>\
+                        <button attr-id="'+ element.id +'" attr-type="delete" class="btn btn-rose">Delete</button>\
                     </td></tr>'
             $("#tableItems").append(newRowContent); 
             })

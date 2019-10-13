@@ -13,3 +13,9 @@ label{
 .require{
     color:red;
 }
+
+.btn-cyan {
+    background-color: #00dddd;
+    border-color: #00dddd;
+    color: white;
+}
