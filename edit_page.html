@@ -23,9 +23,19 @@
         <label>Number<span class="require">*</span>:</label>
         <input class="form-control" id="number"> 
         <label>Invoice date<span class="require">*</span>:</label>
-        <input class="form-control" id="date_created"> 
+        <div class="input-group">
+          <input id="date_created" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <img class="input-group-text" src="/css/calendar.png"/>
+          </div>
+        </div>
         <label>Supply date<span class="require">*</span>:</label>
-        <input class="form-control" id="date_supply"> 
+        <div class="input-group">
+          <input id="date_supply" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <img class="input-group-text" src="/css/calendar.png"/>
+          </div>
+        </div>
         <label>Comment:</label>
         <textarea class="form-control" id="comment"></textarea>
         <label class="require">*required field</label>
