@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+  - "6"
+
+before_install:
+  - npm install -g newman
+
+script:
+  - newman run task_2\3\Second_collection.postman_collection.json -d task_2\3\data.json
