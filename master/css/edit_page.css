@@ -1,0 +1,20 @@
+h2{
+    margin-top: .5rem;
+}
+
+label{
+    margin-top: .5em;
+}
+
+#btnAction{
+    margin-top: .5em;
+}
+
+.require{
+    color:red;
+}
+
+img{
+	height: 38px;
+	width: 50px;
+}
