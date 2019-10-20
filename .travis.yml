@@ -7,5 +7,12 @@ before_install:
   - npm install -g newman
 
 script:
-  - newman run task_2/3/First_collection_test.postman_collection.json
-  - newman run task_2/3/Second_collection.postman_collection.json -d task_2/3/data.json
+  - newman run src/task_2/3/First_collection_test.postman_collection.json
+  - newman run src/task_2/3/Second_collection.postman_collection.json -d src/task_2/3/data.json
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash script/deploy-to-gh-pages.sh
+  on:
+    all_branches: true
