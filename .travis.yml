@@ -7,8 +7,8 @@ before_install:
   - npm install -g newman
 
 script:
-  - newman run src/task_2/3/First_collection_test.postman_collection.json
-  - newman run src/task_2/3/Second_collection.postman_collection.json -d src/task_2/3/data.json
+  - newman run task_2/3/First_collection_test.postman_collection.json
+  - newman run task_2/3/Second_collection.postman_collection.json -d task_2/3/data.json
 
 deploy:
   provider: script
