@@ -1,8 +1,8 @@
 # Выполнение заданий #
 Задание выполнено в рамках "Школы разработки".<br>
 Ссылки на развернутые приложения:
-- с ветки [develop](https://xakimaa.github.io/Invoices/develop/)
-- с ветки [master](https://xakimaa.github.io/Invoices/master/)
+- с ветки [develop](https://progerfour.github.io/Invoices/develop/)
+- с ветки [master](https://progerfour.github.io/Invoices/master/)
 
 ## Что можно сделать с помощью данного веб-приложения? ##
 1. На главной странице приложения просмотреть список счетов (накладных).
